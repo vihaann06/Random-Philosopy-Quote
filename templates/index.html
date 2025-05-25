@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Philosophy Quote</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            margin: 0;
+            background: url(static/background.jpg) no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .quote-container {
+            background: rgba(245, 222, 179, 0.85); /* warm parchment color with transparency */
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(80, 50, 20, 0.25);
+            max-width: 650px;
+            text-align: center;
+            margin: 1rem;
+            border: 2px solid #a67c52; /* renaissance brown */
+        }
+        .quote {
+            font-size: 1.7rem;
+            color: #4b2e05; /* deep brown */
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        .author {
+            font-size: 1.2rem;
+            color: #7c5a1f; /* gold-brown */
+            margin-bottom: 1.5rem;
+        }
+        .refresh-button {
+            background-color: #a67c52;
+            color: #fffbe6;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-family: 'Times New Roman', Times, serif;
+            transition: background 0.3s;
+            box-shadow: 0 2px 8px rgba(80, 50, 20, 0.15);
+        }
+        .refresh-button:hover {
+            background-color: #7c5a1f;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-container">
+        <div class="quote">{{ quote }}</div>
+        <div class="author">― {{ author }}</div>
+        <button class="refresh-button" onclick="window.location.reload()">Get Another Quote</button>
+    </div>
+</body>
+</html> 
