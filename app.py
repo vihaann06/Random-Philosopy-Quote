@@ -54,6 +54,3 @@ def index():
     quotes = get_philosophy_quotes()
     random_quote = random.choice(quotes) if quotes else {'text': "No quotes available", 'author': ''}
     return render_template('index.html', quote=random_quote['text'], author=random_quote['author'])
-
-if __name__ == '__main__':
-    app.run(debug=True)
